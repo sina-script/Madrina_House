@@ -1,13 +1,13 @@
 import styles from "./Card.module.css";
 
-function Card(props) {
+function Card({ title, price, image }) {
   return (
     <div className={styles.productCard}>
       <div className={styles.imageContainer}>
         <div className={styles.badge}>Exclusive</div>
         <div className={styles.imagePlaceholder}>
           <span className={styles.placeholderText}>
-            <img src={props.image} alt="" className={styles.cardImage} />
+            <img src={image} alt="house image" className={styles.cardImage} />
           </span>
         </div>
       </div>
@@ -18,7 +18,7 @@ function Card(props) {
           <span className={styles.rating}>★ 4.9</span>
         </div>
 
-        <h3 className={styles.cardTitle}>Titanium Smart Chrono</h3>
+        <h3 className={styles.cardTitle}>{title}</h3>
 
         <p className={styles.cardDescription}>
           Engineered with aerospace-grade materials, sapphire crystal display,
@@ -28,7 +28,7 @@ function Card(props) {
         <div className={styles.cardFooter}>
           <div className={styles.priceSection}>
             <span className={styles.currency}>$</span>
-            <span className={styles.price}>1,290</span>
+            <span className={styles.price}>{price}</span>
           </div>
 
           <button className={styles.buyBtn}>
