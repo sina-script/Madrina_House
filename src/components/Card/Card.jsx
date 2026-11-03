@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 
-function Card({ title, price, image }) {
+function Card({ title, price, image , score}) {
   return (
     <div className={styles.productCard}>
       <div className={styles.imageContainer}>
@@ -15,7 +15,7 @@ function Card({ title, price, image }) {
       <div className={styles.contentContainer}>
         <div className={styles.metaInfo}>
           <span className={styles.category}>Master Edition</span>
-          <span className={styles.rating}>★ 4.9</span>
+          <span className={styles.rating}>{score || "5.0"}</span>
         </div>
 
         <h3 className={styles.cardTitle}>{title}</h3>
