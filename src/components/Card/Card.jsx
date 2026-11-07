@@ -1,10 +1,10 @@
 import styles from "./Card.module.css";
 
-function Card({ title, price, image , score}) {
+function Card({ id, title, price, image, score, removeCard }) {
   return (
-    <div className={styles.productCard}>
+    <div className={styles.productCard} onClick={() => removeCard(id)}>
       <div className={styles.imageContainer}>
-        <div className={styles.badge}>Exclusive</div>
+        <div className={styles.badge}>Exclusive</div>0
         <div className={styles.imagePlaceholder}>
           <span className={styles.placeholderText}>
             <img src={image} alt="house image" className={styles.cardImage} />
